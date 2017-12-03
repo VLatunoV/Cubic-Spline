@@ -2,5 +2,5 @@
 
 vec2d cubic::calc(float t)
 {
-	return a * (t * t * t) + b * (t * t) + c * t + d;
+	return d + t * (c + t * (b + t * a));
 }
