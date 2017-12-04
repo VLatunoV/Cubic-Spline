@@ -58,6 +58,8 @@ void Spline::solve_natural_tridiag(const std::vector<vec2d>& rhs, std::vector<ve
 }
 void Spline::solve_spline()
 {
+	if (points.size() < 2)
+		return;
 	size_t last_idx = points.size() - 1;
 	std::vector<vec2d> rhs(last_idx + 1);
 	std::vector<vec2d> D;
